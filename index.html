@@ -3,21 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>National Interiors — UPVC Doors, Windows &amp; Modular Kitchens | Chidambaram</title>
+<title>National Interiors</title>
 <meta name="description" content="National Interiors - UPVC Doors, Windows and Modular Kitchen works in Chidambaram. Modular kitchens, wardrobes, TV units, UPVC doors and windows, steel and glass handrails.">
 <style>
   :root{
-    --gold: #b8892c;
-    --gold-light: #d9b978;
-    --gold-dark: #8a6a22;
-    --ink: #1c160a;
-    --black: #fbf7ec;
-    --charcoal: #f2e9d3;
-    --charcoal-2: #ece0c2;
-    --cream: #2c2410;
-    --ivory: #1c160a;
-    --grey: #6e6248;
-    --line: rgba(184,137,44,0.25);
+    --gold: #c9a24a;
+    --gold-light: #e8cf8a;
+    --gold-dark: #9c7a2e;
+    --black: #0c0c0c;
+    --charcoal: #17150f;
+    --charcoal-2: #201d15;
+    --cream: #f6f0e2;
+    --ivory: #fbf8f0;
+    --grey: #b8b2a2;
+    --line: rgba(201,162,74,0.28);
     --radius: 2px;
     --serif: "Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
     --sans: "Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
@@ -35,14 +34,14 @@
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
 
-  ::selection{background:var(--gold);color:var(--ink);}
+  ::selection{background:var(--gold);color:var(--black);}
 
   /* ---------- utility ---------- */
   .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
   .eyebrow{
     font-family:var(--serif);
     font-style:italic;
-    color:var(--gold-dark);
+    color:var(--gold-light);
     font-size:1rem;
     letter-spacing:.02em;
   }
@@ -57,7 +56,7 @@
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:16px 34px;
     background:var(--gold);
-    color:var(--ink);
+    color:var(--black);
     font-weight:600;
     font-size:.98rem;
     border:1px solid var(--gold);
@@ -65,11 +64,11 @@
     cursor:pointer;
     transition:background .25s ease, color .25s ease, transform .2s ease, box-shadow .25s ease;
   }
-  .btn:hover{background:transparent;color:var(--gold-dark);box-shadow:0 0 0 1px var(--gold) inset;transform:translateY(-2px);}
+  .btn:hover{background:transparent;color:var(--gold-light);box-shadow:0 0 0 1px var(--gold) inset;transform:translateY(-2px);}
   .btn-outline{
-    background:transparent;color:var(--gold-dark);border:1px solid var(--line);
+    background:transparent;color:var(--gold-light);border:1px solid var(--line);
   }
-  .btn-outline:hover{background:var(--gold);color:var(--ink);}
+  .btn-outline:hover{background:var(--gold);color:var(--black);}
 
   /* ---------- reveal on scroll ---------- */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);}
@@ -78,26 +77,10 @@
   .reveal-delay-2.in{transition-delay:.24s;}
   .reveal-delay-3.in{transition-delay:.36s;}
 
-  /* ---------- top strip ---------- */
-  .top-strip{
-    background:var(--charcoal);
-    border-bottom:1px solid var(--line);
-    font-size:.82rem;
-    color:var(--grey);
-  }
-  .top-strip .wrap{
-    display:flex;justify-content:space-between;align-items:center;
-    padding-top:9px;padding-bottom:9px;
-    gap:16px;flex-wrap:wrap;
-  }
-  .top-strip a{color:var(--gold-dark);}
-  .top-strip .ts-left{display:flex;gap:26px;flex-wrap:wrap;}
-  .top-strip span{display:inline-flex;align-items:center;gap:7px;}
-
   /* ---------- nav ---------- */
   header.site-header{
     position:sticky;top:0;z-index:60;
-    background:rgba(251,247,236,.88);
+    background:rgba(12,12,12,.88);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
@@ -106,20 +89,23 @@
     padding-top:14px;padding-bottom:14px;
   }
   .brand{display:flex;align-items:center;gap:14px;}
-  .brand img{height:46px;width:auto;filter:drop-shadow(0 0 6px rgba(184,137,44,.25));}
+  .brand img{height:46px;width:auto;filter:drop-shadow(0 0 6px rgba(201,162,74,.25));}
   .brand-name{font-family:var(--serif);font-size:1.28rem;color:var(--ivory);letter-spacing:.01em;line-height:1.1;}
-  .brand-name small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;color:var(--gold-dark);margin-top:3px;}
-  .nav-links{display:flex;gap:34px;align-items:center;}
+  .brand-name small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;color:var(--gold-light);margin-top:3px;}
+  .nav-links{display:flex;gap:30px;align-items:center;}
   .nav-links a{font-size:.88rem;color:var(--grey);transition:color .2s ease;position:relative;}
-  .nav-links a:hover{color:var(--gold-dark);}
-  .nav-cta{display:flex;gap:12px;align-items:center;}
+  .nav-links a:hover{color:var(--gold-light);}
+  .nav-cta{display:flex;gap:12px;align-items:center;flex-direction:column;align-items:flex-end;}
   .nav-cta .btn{padding:11px 22px;font-size:.85rem;}
+  .nav-cta .phones{display:flex;gap:10px;font-size:.72rem;color:var(--grey);}
+  .nav-cta .phones a{color:var(--gold-light);}
   .menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.6rem;cursor:pointer;}
 
   @media (max-width:900px){
     .nav-links{display:none;}
     .menu-toggle{display:block;}
     .nav-cta .btn-outline{display:none;}
+    .nav-cta .phones{display:none;}
   }
 
   /* ---------- hero + booking ---------- */
@@ -127,8 +113,8 @@
     position:relative;
     padding:64px 0 90px;
     background:
-      radial-gradient(ellipse at 18% 0%, rgba(184,137,44,.14), transparent 55%),
-      radial-gradient(ellipse at 90% 20%, rgba(184,137,44,.09), transparent 50%),
+      radial-gradient(ellipse at 18% 0%, rgba(201,162,74,.14), transparent 55%),
+      radial-gradient(ellipse at 90% 20%, rgba(201,162,74,.09), transparent 50%),
       linear-gradient(180deg,var(--black) 0%, var(--charcoal) 100%);
     overflow:hidden;
   }
@@ -138,7 +124,7 @@
       linear-gradient(var(--line) 1px, transparent 1px),
       linear-gradient(90deg, var(--line) 1px, transparent 1px);
     background-size:64px 64px;
-    opacity:.09;pointer-events:none;
+    opacity:.06;pointer-events:none;
   }
   .hero-grid{
     position:relative;z-index:2;
@@ -156,7 +142,7 @@
   }
   .hero-badges{display:flex;gap:28px;margin-top:38px;flex-wrap:wrap;}
   .hero-badges div{border-left:2px solid var(--gold);padding-left:14px;}
-  .hero-badges strong{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--gold-dark);}
+  .hero-badges strong{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--gold-light);}
   .hero-badges span{font-size:.78rem;color:var(--grey);letter-spacing:.03em;}
 
   /* booking card */
@@ -165,7 +151,7 @@
     border:1px solid var(--line);
     border-radius:6px;
     padding:34px 30px 28px;
-    box-shadow:0 30px 60px -20px rgba(28,22,10,.18), 0 0 0 1px rgba(184,137,44,.05);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(201,162,74,.05);
     position:relative;
   }
   .book-card:before{
@@ -175,10 +161,10 @@
   .book-card h3{font-size:1.35rem;margin-bottom:4px;}
   .book-card .sub{color:var(--grey);font-size:.85rem;margin-bottom:22px;}
   .field{margin-bottom:16px;}
-  .field label{display:block;font-size:.76rem;letter-spacing:.04em;color:var(--gold-dark);margin-bottom:7px;}
+  .field label{display:block;font-size:.76rem;letter-spacing:.04em;color:var(--gold-light);margin-bottom:7px;}
   .field input,.field select,.field textarea{
     width:100%;
-    background:rgba(28,22,10,.035);
+    background:rgba(0,0,0,.35);
     border:1px solid var(--line);
     color:var(--ivory);
     padding:12px 13px;
@@ -189,14 +175,15 @@
   }
   .field select{cursor:pointer;}
   .field input:focus,.field select:focus,.field textarea:focus{
-    outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,44,.15);
+    outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.15);
   }
+  .field input[type="date"]{color-scheme:dark;}
   .field textarea{resize:vertical;min-height:70px;}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   @media (max-width:480px){.row2{grid-template-columns:1fr;}}
   .book-card .btn{width:100%;margin-top:6px;font-size:1rem;padding:15px;}
   .form-note{font-size:.74rem;color:var(--grey);margin-top:12px;text-align:center;}
-  .form-note a{color:var(--gold-dark);}
+  .form-note a{color:var(--gold-light);}
 
   /* ---------- section shell ---------- */
   section{padding:96px 0;}
@@ -205,60 +192,50 @@
   .section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);margin-top:12px;}
   .section-head p{color:var(--grey);margin-top:16px;font-size:1rem;}
 
-  /* ---------- services ---------- */
+  /* ---------- services (now with images) ---------- */
   .services{background:var(--charcoal);position:relative;}
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .svc-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+  }
   @media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:600px){.svc-grid{grid-template-columns:1fr;}}
   .svc-card{
     background:var(--charcoal);
-    padding:38px 30px;
     transition:background .3s ease;
     position:relative;
     overflow:hidden;
+    display:flex;
+    flex-direction:column;
   }
   .svc-card:hover{background:var(--charcoal-2);}
+  .svc-media{
+    position:relative;
+    aspect-ratio:4/3;
+    background:var(--charcoal-2);
+    overflow:hidden;
+  }
+  .svc-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
+  .svc-card:hover .svc-media img{transform:scale(1.05);}
+  .svc-media .ph{
+    position:absolute;inset:10px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    border:1px dashed var(--line);
+    color:var(--grey);
+    font-size:.74rem;
+    letter-spacing:.03em;
+    padding:14px;
+    line-height:1.5;
+  }
+  .svc-media .ph b{display:block;color:var(--gold-light);font-family:var(--serif);font-style:italic;font-size:.95rem;margin-bottom:6px;}
+  .svc-body{padding:26px 26px 30px;}
   .svc-card .num{font-family:var(--serif);font-style:italic;color:var(--gold-dark);font-size:.85rem;}
-  .svc-icon{
-    width:46px;height:46px;margin:18px 0 20px;
-    border:1px solid var(--gold);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;color:var(--gold-dark);
-  }
-  .svc-card h3{font-size:1.15rem;margin-bottom:10px;}
-  .svc-card p{color:var(--grey);font-size:.9rem;}
-  .svc-card .tag{
-    display:inline-block;margin-top:14px;font-size:.72rem;color:var(--gold-dark);
-    border:1px solid var(--line);padding:4px 10px;border-radius:20px;
-  }
-
-  /* ---------- gallery ---------- */
-  .gallery{background:var(--black);}
-  .gal-grid{
-    display:grid;
-    grid-template-columns: 0.85fr 1.15fr 0.85fr;
-    gap:22px;
-    align-items:start;
-  }
-  @media (max-width:860px){.gal-grid{grid-template-columns:1fr 1fr;}}
-  @media (max-width:560px){.gal-grid{grid-template-columns:1fr;}}
-  .gal-item{
-    position:relative;border:1px solid var(--line);overflow:hidden;border-radius:3px;
-    background:var(--charcoal);
-  }
-  .gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
-  .gal-item:hover img{transform:scale(1.06);}
-  .gal-item .cap{
-    position:absolute;left:0;right:0;bottom:0;padding:18px 18px 16px;
-    background:linear-gradient(0deg,rgba(0,0,0,.88),transparent);
-  }
-  .gal-item .cap span{font-size:.68rem;letter-spacing:.1em;color:var(--gold-light);}
-  .gal-item .cap h4{font-family:var(--serif);font-size:1.15rem;color:#fbf7ec;margin-top:4px;font-weight:400;}
-  .gal-tall{aspect-ratio: 335/597;}
-  .gal-square{aspect-ratio: 1/1;}
+  .svc-card h3{font-size:1.15rem;margin:8px 0 10px;}
+  .svc-card p{color:var(--grey);font-size:.88rem;line-height:1.7;}
 
   /* ---------- why us ---------- */
   .why{background:var(--charcoal);}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
   @media (max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:520px){.why-grid{grid-template-columns:1fr;}}
   .why-item{text-align:center;padding:20px 12px;}
@@ -269,14 +246,32 @@
   /* ---------- CTA strip ---------- */
   .cta-strip{
     background:linear-gradient(90deg,var(--gold-dark),var(--gold));
-    color:var(--ink);
+    color:var(--black);
     padding:52px 0;
   }
   .cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:22px;}
-  .cta-strip h3{color:var(--ink);font-size:1.5rem;}
-  .cta-strip p{color:rgba(28,22,10,.72);margin-top:4px;}
-  .cta-strip .btn{background:var(--ink);color:var(--gold-light);border-color:var(--ink);}
-  .cta-strip .btn:hover{background:transparent;color:var(--ink);box-shadow:0 0 0 1.5px var(--ink) inset;}
+  .cta-strip h3{color:var(--black);font-size:1.5rem;}
+  .cta-strip p{color:rgba(0,0,0,.72);margin-top:4px;}
+  .cta-strip .btn{background:var(--black);color:var(--gold-light);border-color:var(--black);}
+  .cta-strip .btn:hover{background:transparent;color:var(--black);box-shadow:0 0 0 1.5px var(--black) inset;}
+
+  /* ---------- about ---------- */
+  .about{background:var(--black);}
+  .about-inner{max-width:820px;margin:0 auto;}
+  .about h3{font-size:1.25rem;margin:34px 0 12px;color:var(--gold-light);}
+  .about h3:first-of-type{margin-top:8px;}
+  .about p{color:var(--grey);font-size:.98rem;line-height:1.85;margin-bottom:14px;}
+  .about ul.services-list{list-style:none;display:flex;flex-wrap:wrap;gap:10px 18px;margin:14px 0 6px;padding:0;}
+  .about ul.services-list li{
+    font-size:.85rem;color:var(--gold-light);
+    border:1px solid var(--line);padding:6px 14px;border-radius:20px;
+  }
+  .about .signoff{
+    margin-top:34px;padding-top:26px;border-top:1px solid var(--line);
+    text-align:center;
+  }
+  .about .signoff strong{display:block;font-family:var(--serif);font-size:1.3rem;color:var(--ivory);letter-spacing:.02em;margin-bottom:10px;}
+  .about .signoff span{display:block;color:var(--grey);font-size:.92rem;}
 
   /* ---------- contact ---------- */
   .contact{background:var(--black);}
@@ -286,15 +281,16 @@
   .info-row:first-child{padding-top:0;}
   .info-ic{
     width:38px;height:38px;flex:none;border:1px solid var(--gold);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;color:var(--gold-dark);
+    display:flex;align-items:center;justify-content:center;color:var(--gold-light);
   }
   .info-row h4{font-size:.9rem;color:var(--ivory);margin-bottom:4px;letter-spacing:.02em;}
   .info-row p, .info-row a{font-size:.88rem;color:var(--grey);}
-  .info-row a:hover{color:var(--gold-dark);}
+  .info-row a:hover{color:var(--gold-light);}
+  .info-row .num-list{display:flex;flex-direction:column;gap:2px;}
   .map-frame{
     border:1px solid var(--line);border-radius:4px;overflow:hidden;height:100%;min-height:340px;
   }
-  .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.15) contrast(.95);}
+  .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.35) invert(.92) contrast(.9);}
 
   /* ---------- footer ---------- */
   footer{background:var(--charcoal);border-top:1px solid var(--line);padding:44px 0 26px;}
@@ -304,22 +300,22 @@
   .foot-brand span{font-family:var(--serif);color:var(--ivory);font-size:1.05rem;}
   .foot-links{display:flex;gap:26px;flex-wrap:wrap;}
   .foot-links a{font-size:.85rem;color:var(--grey);}
-  .foot-links a:hover{color:var(--gold-dark);}
+  .foot-links a:hover{color:var(--gold-light);}
   .foot-bottom{display:flex;justify-content:space-between;padding-top:22px;flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--grey);}
-  .foot-bottom a{color:var(--gold-dark);}
+  .foot-bottom a{color:var(--gold-light);}
 
   /* whatsapp float */
   .wa-float{
     position:fixed;right:22px;bottom:22px;z-index:70;
     width:58px;height:58px;border-radius:50%;
-    background:var(--gold);color:var(--ink);
+    background:var(--gold);color:var(--black);
     display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 26px -6px rgba(184,137,44,.55);
+    box-shadow:0 10px 26px -6px rgba(201,162,74,.55);
     animation:pulse 2.6s ease-in-out infinite;
   }
   @keyframes pulse{
-    0%,100%{box-shadow:0 10px 26px -6px rgba(184,137,44,.55);}
-    50%{box-shadow:0 10px 34px -4px rgba(184,137,44,.85);}
+    0%,100%{box-shadow:0 10px 26px -6px rgba(201,162,74,.55);}
+    50%{box-shadow:0 10px 34px -4px rgba(201,162,74,.85);}
   }
 
   ::-webkit-scrollbar{width:9px;}
@@ -328,7 +324,7 @@
 
   .toast{
     position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);
-    background:var(--gold);color:var(--ink);padding:14px 26px;border-radius:4px;
+    background:var(--gold);color:var(--black);padding:14px 26px;border-radius:4px;
     font-size:.9rem;font-weight:600;opacity:0;pointer-events:none;
     transition:opacity .35s ease, transform .35s ease;z-index:100;
   }
@@ -337,36 +333,23 @@
 </head>
 <body>
 
-<div class="top-strip">
-  <div class="wrap">
-    <div class="ts-left">
-      <span>&#9742; <a href="tel:+917904645877">079046 45877</a></span>
-      <span>&#9993; Open 24 hours for enquiries</span>
-    </div>
-    <div class="ts-left">
-      <span>Ramzan Thaikkal, 1/1121, Chidambaram Main Rd, Kattumannarkoil</span>
-    </div>
-  </div>
-</div>
-
 <header class="site-header">
   <nav class="wrap">
     <div class="brand">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAE6CAYAAADgNKBOAAEAAElEQVR42uz9ebwm13keBj7vOVX1bXfvvr0vQBNAYyNBqkFBsigKlGxRlBdJpABalmxH8i4nccbWOMv8JmhmfnFmNI7tTGYSx44dK7GisDuyREmWLYoUWrJJkRRAggSxEHvvd9+/rarOeeePc07Vqfrq++7tRm8AblFX6O77LbWc8z7v+jyE3WP32D12dDAzeX8lAAxAll937tw5LC4u8pNPPqkAEDOfXFra4CgCkiSRzOovA6LVj/sMhv+Z0FqDmaGUEu12WxPRY41G45F+v6+JSACAZkaaJGAAWil7btlZbnMV+dcRAQQCk/lXIuJ6o05a6Tmtdb/RaByP41gDEACQJMmvRFG0WavVSErJQggIIZCmKZgZUppboaF5rDlGSZIs1uv1/w2AnpycfBUAzpw5I2dnZ+nxxx/PPtc/zp49y0888YQunDHRTi5s99g93vMH7d6C3WP3GAng9Oyzz0oAePTRR5Nref/GxsZH0zT9xU6nfarX61KaaorjmOr1BimlEff7YGXAEBZciQiaNdbW1jF3dQ5X5+awtbkFMGeIplSCdq+DJI6RJgmIDegJEJjMz5ArAlgX/8rGoxBBgKjeRC0K0Wo1IQD0ezFIEAABkoR9+/twn"
-      alt="National Interiors logo">
+      <img src="data:image/png;base64,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" alt="National Interiors logo">
       <div class="brand-name">National Interiors
-        <small>UPVC DOORS &middot; WINDOWS &middot; MODULAR KITCHEN WORKS</small>
       </div>
     </div>
     <div class="nav-links">
       <a href="#book">Book a Visit</a>
       <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
       <a href="#why">Why Us</a>
+      <a href="#about">About Us</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
       <a class="btn btn-outline" href="tel:+917904645877">Call Now</a>
+      <span class="phones"><a href="tel:+917904645877">079046 45877</a>&nbsp;/&nbsp;<a href="tel:+919788997701">97889 97701</a></span>
       <a class="btn" href="#book">Book Now</a>
     </div>
     <button class="menu-toggle" id="menuToggle">&#9776;</button>
@@ -376,9 +359,8 @@
 <section class="hero" id="book">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="eyebrow">Chidambaram &amp; Sirkazhi's Interior Specialists</span>
-      <h1>Crafted interiors, <span class="gold-text">built to last a lifetime.</span></h1>
-      <p class="lead">From modular kitchens to UPVC doors and windows — National Interiors designs and installs every fitting with precision, quality hardware, and a 5.0-rated finish.</p>
+      <h1>UPVC Doors & Windows | <span class="gold-text">Modular Interiors | Glass & SS Works.</span></h1>
+      <p class="lead">Design • Manufacture • Install Complete Interior Solutions</p>
       <div class="hero-badges">
         <div><strong>5.0&#9733;</strong><span>Google Rated (13 Reviews)</span></div>
         <div><strong>24 Hrs</strong><span>Enquiry &amp; Support Line</span></div>
@@ -404,17 +386,28 @@
           <label for="fservice">Service Required *</label>
           <select id="fservice" required>
             <option value="" disabled selected>Select a service</option>
+            <option>UPVC Doors and Windows</option>
+            <option>Toughened Glass &amp; Stainless Steel Handrails</option>
+            <option>Curved Toughened Glass Handrails</option>
+            <option>Toughened Glass Design Doors</option>
+            <option>Toughened Glass Canopies</option>
+            <option>Toughened Glass Roofing</option>
             <option>Modular Kitchens</option>
-            <option>Bedroom Wardrobes</option>
+            <option>Modular Wardrobes</option>
             <option>TV Units</option>
-            <option>UPVC Doors and Windows (options available)</option>
-            <option>Stainless Steel Handrails</option>
-            <option>Toughened Glass Handrails</option>
+            <option>Pooja Units</option>
+            <option>False Ceiling &amp; Wall Paneling</option>
           </select>
         </div>
-        <div class="field">
-          <label for="faddress">Location / Area *</label>
-          <input type="text" id="faddress" required placeholder="Your city or area">
+        <div class="row2">
+          <div class="field">
+            <label for="faddress">Location / Area *</label>
+            <input type="text" id="faddress" required placeholder="Your city or area">
+          </div>
+          <div class="field">
+            <label for="fdate">Preferred Visit Date</label>
+            <input type="date" id="fdate">
+          </div>
         </div>
         <div class="field">
           <label for="fmsg">Additional Details</label>
@@ -422,7 +415,7 @@
         </div>
         <button type="submit" class="btn">Book Now via WhatsApp</button>
       </form>
-      <p class="form-note">Or call us directly at <a href="tel:+917904645877">079046 45877</a></p>
+      <p class="form-note">Or call us directly at <a href="tel:+917904645877">079046 45877</a> / <a href="tel:+919788997701">97889 97701</a></p>
     </div>
   </div>
 </section>
@@ -437,72 +430,150 @@
   </div>
   <div class="wrap" style="padding:0;">
     <div class="svc-grid reveal">
-      <div class="svc-card">
-        <span class="num">01</span>
-        <div class="svc-icon">&#127860;</div>
-        <h3>Modular Kitchens</h3>
-        <p>Ergonomic layouts, soft-close fittings and durable countertops designed around how you actually cook.</p>
-        <span class="tag">Design + Install</span>
-      </div>
-      <div class="svc-card">
-        <span class="num">02</span>
-        <div class="svc-icon">&#128716;</div>
-        <h3>Bedroom Wardrobes</h3>
-        <p>Sliding and hinged wardrobes with built-in lighting, mirrors and dressing units tailored to your room.</p>
-        <span class="tag">Custom Sizing</span>
-      </div>
-      <div class="svc-card">
-        <span class="num">03</span>
-        <div class="svc-icon">&#128250;</div>
-        <h3>TV Units</h3>
-        <p>Floating and panel-mounted TV units with concealed wiring and display shelving for a clean living room.</p>
-        <span class="tag">Made to Wall</span>
-      </div>
-      <div class="svc-card">
-        <span class="num">04</span>
-        <div class="svc-icon">&#128682;</div>
-        <h3>UPVC Doors &amp; Windows</h3>
-        <p>Weather-sealed, low-maintenance UPVC doors and windows in multiple profiles, colours and glass options available.</p>
-        <span class="tag">Options Available</span>
-      </div>
-      <div class="svc-card">
-        <span class="num">05</span>
-        <div class="svc-icon">&#9878;</div>
-        <h3>Stainless Steel Handrails</h3>
-        <p>Corrosion-resistant SS railings for staircases and balconies, finished to a mirror or matte grade.</p>
-        <span class="tag">Interior &amp; Exterior</span>
-      </div>
-      <div class="svc-card">
-        <span class="num">06</span>
-        <div class="svc-icon">&#128737;</div>
-        <h3>Toughened Glass Handrails</h3>
-        <p>Frameless toughened glass railings that keep balconies and staircases open, bright and modern.</p>
-        <span class="tag">Safety Certified</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="gallery" class="gallery">
-  <div class="wrap">
-    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
-      <span class="eyebrow">Recent Work</span>
-      <h2>A glimpse into our finished spaces</h2>
-      <p>A few interiors handled from measurement to final handover.</p>
-    </div>
-    <div class="gal-grid">
-      <div class="gal-item gal-tall reveal">
-        <img src="wardrobe.jpg" alt="Bedroom wardrobe with mirror unit by National Interiors">
-        <div class="cap"><span>WARDROBE</span><h4>Wardrobe &amp; Dressing Unit</h4></div>
+      <!-- 1. UPVC Doors & Windows -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: PREMIUM UPVC DOORS & WINDOWS photo -->
+          <div class="ph"><b>Add photo</b>Premium UPVC Doors &amp; Windows</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">01</span>
+          <h3>Premium UPVC Doors &amp; Windows</h3>
+          <p>High-quality UPVC Doors and Windows designed to deliver durability, smooth operation, excellent ventilation, and a modern appearance. With strong UPVC profiles and stylish glass options, they provide a perfect combination of security, comfort, natural light, and low maintenance for residential and commercial buildings.</p>
+        </div>
       </div>
-      <div class="gal-item gal-square reveal reveal-delay-1">
-        <img src="kitchen.jpg" alt="Modular kitchen by National Interiors">
-        <div class="cap"><span>KITCHEN</span><h4>Modular Kitchen</h4></div>
+
+      <!-- 2. Toughened Glass & Stainless Steel Handrail -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: TOUGHENED GLASS & STAINLESS STEEL HANDRAIL photo -->
+          <div class="ph"><b>Add photo</b>Toughened Glass &amp; Stainless Steel Handrail</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">02</span>
+          <h3>Toughened Glass &amp; Stainless Steel Handrail</h3>
+          <p>Premium Toughened Glass Handrail combined with durable Stainless Steel fittings, designed to provide safety without compromising on style. The transparent glass creates an open and spacious appearance, while the strong stainless steel supports ensure durability and stability. Ideal for staircases, balconies, terraces, and modern commercial spaces.</p>
+        </div>
       </div>
-      <div class="gal-item gal-tall reveal reveal-delay-2">
-        <img src="tv-unit.jpg" alt="TV unit by National Interiors">
-        <div class="cap"><span>LIVING ROOM</span><h4>TV Unit</h4></div>
+
+      <!-- 3. Curved Toughened Glass Handrail -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: CURVED TOUGHENED GLASS HANDRAIL photo -->
+          <div class="ph"><b>Add photo</b>Curved Toughened Glass Handrail</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">03</span>
+          <h3>Curved Toughened Glass Handrail</h3>
+          <p>Elegant Curved Toughened Glass Handrails designed to enhance the beauty and safety of modern staircases. The curved stainless steel handrail follows the staircase profile, while the clear decorative glass panels create a stylish and open appearance. Ideal for residential and commercial interiors.</p>
+        </div>
       </div>
+
+      <!-- 4. Toughened Glass Design Door -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: TOUGHENED GLASS DESIGN DOOR photo -->
+          <div class="ph"><b>Add photo</b>Toughened Glass Design Door</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">04</span>
+          <h3>Toughened Glass Design Door</h3>
+          <p>Stylish Toughened Glass Doors featuring elegant decorative patterns, premium fittings, and a modern frameless appearance. Designed to bring a combination of natural light, spaciousness, durability, and sophisticated aesthetics to homes, offices, and commercial interiors.</p>
+        </div>
+      </div>
+
+      <!-- 5. Toughened Glass Canopy -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: TOUGHENED GLASS CANOPY photo -->
+          <div class="ph"><b>Add photo</b>Toughened Glass Canopy</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">05</span>
+          <h3>Toughened Glass Canopy</h3>
+          <p>Elegant and durable Toughened Glass Canopies designed to provide reliable weather protection while enhancing the exterior appearance of homes and commercial buildings. The frameless glass design creates a modern, spacious look with excellent natural light transmission. Suitable for entrances, balconies, porches, and outdoor areas.</p>
+        </div>
+      </div>
+
+      <!-- 6. Toughened Glass Roof -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: TOUGHENED GLASS ROOF photo -->
+          <div class="ph"><b>Add photo</b>Toughened Glass Roof</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">06</span>
+          <h3>Toughened Glass Roof</h3>
+          <p>Premium Toughened Glass Roofing designed to provide excellent weather protection while maintaining a bright and open environment. The strong glass structure offers a modern architectural appearance, allowing natural light to pass through while creating a stylish and durable covering for terraces, skylights, entrances, and outdoor spaces.</p>
+        </div>
+      </div>
+
+      <!-- 7. Modular Kitchen -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: MODERN MODULAR KITCHEN photo -->
+          <div class="ph"><b>Add photo</b>Modern Modular Kitchen</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">07</span>
+          <h3>Modern Modular Kitchen</h3>
+          <p>Elegant and functional Modular Kitchen designed with a sleek contemporary finish and smart storage solutions. The combination of premium cabinets, spacious countertops, built-in appliances, and modern lighting creates a stylish and highly practical kitchen for everyday living.</p>
+        </div>
+      </div>
+
+      <!-- 8. Modular Wardrobe -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: PREMIUM MODULAR WARDROBE photo -->
+          <div class="ph"><b>Add photo</b>Premium Modular Wardrobe</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">08</span>
+          <h3>Premium Modular Wardrobe</h3>
+          <p>Elegant and spacious Modular Wardrobe designed with a modern combination of storage, drawers, open display shelves, and a stylish dressing unit. The integrated mirror and warm LED lighting add a luxurious touch, while the thoughtfully planned layout provides maximum storage with a clean and sophisticated finish.</p>
+        </div>
+      </div>
+
+      <!-- 9. TV Unit -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: PREMIUM MODERN TV UNIT photo -->
+          <div class="ph"><b>Add photo</b>Premium Modern TV Unit</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">09</span>
+          <h3>Premium Modern TV Unit</h3>
+          <p>A stylish and contemporary TV Unit designed to combine elegant aesthetics with practical storage. Featuring decorative wall panels, open display shelves, warm LED lighting, and sleek cabinetry, this design creates a sophisticated focal point for modern living spaces.</p>
+        </div>
+      </div>
+
+      <!-- 10. Pooja Unit -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: PREMIUM POOJA UNIT photo -->
+          <div class="ph"><b>Add photo</b>Premium Pooja Unit</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">10</span>
+          <h3>Premium Pooja Unit</h3>
+          <p>Beautifully designed Pooja Unit combining a dedicated prayer space with elegant display shelves and a stylish glass-front cabinet. Integrated lighting highlights the decorative elements and creates a warm, peaceful ambience. A perfect blend of traditional functionality and modern interior design.</p>
+        </div>
+      </div>
+
+      <!-- 11. False Ceiling & Wall Paneling -->
+      <div class="svc-card">
+        <div class="svc-media">
+          <!-- Replace this placeholder with: PREMIUM FALSE CEILING & WALL PANELING photo -->
+          <div class="ph"><b>Add photo</b>Premium False Ceiling &amp; Wall Paneling</div>
+        </div>
+        <div class="svc-body">
+          <span class="num">11</span>
+          <h3>Premium False Ceiling &amp; Wall Paneling</h3>
+          <p>Luxurious interior design featuring an elegant false ceiling with layered geometric patterns, recessed lighting, and decorative LED illumination. The coordinated wall paneling adds depth, texture, and a sophisticated finish, creating a bright and premium ambience for residential and commercial interiors.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -514,10 +585,12 @@
       <h2>Built on precision and follow-through</h2>
     </div>
     <div class="why-grid reveal">
-      <div class="why-item"><div class="n">01</div><h4>On-site Measurement</h4><p>Every job starts with an accurate site visit, not guesswork.</p></div>
-      <div class="why-item"><div class="n">02</div><h4>Quality Hardware</h4><p>Branded hinges, channels and profiles that hold up for years.</p></div>
-      <div class="why-item"><div class="n">03</div><h4>Own Installation Team</h4><p>No subcontractors — the people who design it, install it.</p></div>
-      <div class="why-item"><div class="n">04</div><h4>Timely Handover</h4><p>Clear timelines agreed upfront and communicated through the job.</p></div>
+      <div class="why-item"><div class="n">01</div><h4>Free Site Visit</h4><p>Book your free site visit today!</p></div>
+      <div class="why-item"><div class="n">02</div><h4>Custom Design</h4><p>Get your space tailored with custom design!</p></div>
+      <div class="why-item"><div class="n">03</div><h4>Quality Materials</h4><p>Built with only the finest quality materials!</p></div>
+      <div class="why-item"><div class="n">04</div><h4>Professional Installation</h4><p>Expertly handled with professional installation!</p></div>
+      <div class="why-item"><div class="n">05</div><h4>Transparent Pricing</h4><p>Clear and honest with transparent pricing!</p></div>
+      <div class="why-item"><div class="n">06</div><h4>After-Sales Support</h4><p>Reliable care with after‑sales support!</p></div>
     </div>
   </div>
 </section>
@@ -531,6 +604,75 @@
     <a class="btn" href="https://wa.me/917904645877?text=Hi%20National%20Interiors%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp</a>
   </div>
 </div>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="eyebrow">Our Story</span>
+      <h2>About Us</h2>
+    </div>
+    <div class="about-inner reveal">
+      <h3>From a Small Shop to National Interiors</h3>
+      <p>Every successful journey has a beginning. For National Interiors, that beginning was a small shop, a simple dream and the courage to keep moving forward even during the hardest days.</p>
+      <p>Our journey began in 2016, when I started a small shop under the name NATIONAL TRADERS, with the valuable financial support and encouragement of my uncle, Mr. Abdullah.</p>
+      <p>At that time, we did not have a large investment, a big showroom or a well-established business. We started with very limited resources. What we had was the willingness to work hard, learn from every opportunity and build something of our own.</p>
+
+      <h3>Our First Order</h3>
+      <p>One of the most memorable moments in our journey was receiving our very first order — a 4 &times; 4 Aluminium Window for a site at Omampuliyur.</p>
+      <p>It may have been a small order in terms of size, but for us, it meant much more than that. It was the first step towards the future of National Interiors.</p>
+      <p>That first project gave us confidence. From there, we slowly started taking up more work, learning new skills and understanding the needs of our customers. One project led to another, and little by little, the small business began to grow.</p>
+
+      <h3>The Difficult Days</h3>
+      <p>However, our journey was never easy.</p>
+      <p>There were many difficult days during the early stages of the business. My friend Balachandar and I worked together through some extremely challenging financial situations. There were times when we struggled even to arrange a proper meal, but we continued working because we believed that our hard work would eventually create a better future.</p>
+      <p>Those difficult days taught us lessons that no business school could teach us. They taught us to value every customer, respect every opportunity, manage every rupee carefully and, most importantly, never give up when things become difficult.</p>
+
+      <h3>Growing Step by Step</h3>
+      <p>We did not grow overnight.</p>
+      <p>We grew one customer at a time, one project at a time and one lesson at a time.</p>
+      <p>Starting from Aluminium works, we gradually expanded our knowledge and services. With the support of our family, friends, customers and well-wishers, NATIONAL TRADERS continued to develop.</p>
+      <p>As our experience and capabilities grew, our vision also grew.</p>
+      <p>Today, that small beginning has developed into NATIONAL INTERIORS, providing a wide range of solutions including:</p>
+      <ul class="services-list">
+        <li>UPVC Doors &amp; Windows</li>
+        <li>Modular Kitchens</li>
+        <li>Wardrobes</li>
+        <li>TV Units</li>
+        <li>Aluminium Interior Works</li>
+        <li>Toughened Glass Works</li>
+        <li>Stainless Steel Handrails &amp; Gates</li>
+        <li>Complete Interior Solutions</li>
+      </ul>
+
+      <h3>We Remember Where We Started</h3>
+      <p>Today, when we look back at our journey, we don't forget the small shop where everything began.</p>
+      <p>We don't forget Mr. Abdullah, whose financial support helped us take our first step.</p>
+      <p>We don't forget Balachandar, who stood alongside us during some of our most difficult days.</p>
+      <p>We don't forget our first 4 &times; 4 Aluminium Window at Omampuliyur.</p>
+      <p>And most importantly, we don't forget the customers who trusted us when we were still a small and developing business.</p>
+      <p>Every one of these memories is part of the foundation on which National Interiors stands today.</p>
+
+      <h3>Our Promise</h3>
+      <p>Our past has taught us that trust cannot be bought — it has to be earned.</p>
+      <p>That is why we continue to focus on quality workmanship, reliable service, honest communication and customer satisfaction.</p>
+      <p>For us, every project is more than just a job. It is an opportunity to honour the trust that a customer has placed in us.</p>
+
+      <h3>Our Journey Continues</h3>
+      <p>What began in 2016 as a small shop called NATIONAL TRADERS, with the support of Mr. Abdullah, has grown into NATIONAL INTERIORS.</p>
+      <p>We are proud of how far we have come.</p>
+      <p>But we are even more excited about where we are going.</p>
+      <p>The struggles of our past keep us humble. The trust of our customers keeps us motivated. And the dream that began in 2016 continues to drive us forward.</p>
+
+      <div class="signoff">
+        <strong>NATIONAL INTERIORS</strong>
+        <span>Built from a Small Beginning.</span>
+        <span>Strengthened by Struggle.</span>
+        <span>Driven by Hard Work.</span>
+        <span>Growing with Trust.</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="contact" class="contact">
   <div class="wrap contact-grid">
@@ -549,7 +691,10 @@
         <div class="info-ic">&#9742;</div>
         <div>
           <h4>Phone</h4>
-          <a href="tel:+917904645877">079046 45877</a>
+          <div class="num-list">
+            <a href="tel:+917904645877">079046 45877</a>
+            <a href="tel:+919788997701">97889 97701</a>
+          </div>
         </div>
       </div>
       <div class="info-row">
@@ -587,21 +732,20 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAE6CAYAAADgNKBOAAEAAElEQVR42uz9ebwm13keBj7vOVX1bXfvvr0vQBNAYyNBqkFBsigKlGxRlBdJpABalmxH8i4nccbWOMv8JmhmfnFmNI7tTGYSx44dK7GisDuyREmWLYoUWrJJkRRAggSxEHvvd9+/rarOeeePc07Vqfrq++7tRm8AblFX6O77LbWc8z7v+jyE3WP32D12dDAzeX8lAAxAll137tw5LC4u8pNPPqkAEDOfXFra4CgCkiSRzOovA6LVj/sMhv+Z0FqDmaGUEu12WxPRY41G45F+v6+JSACAZkaaJGAAWil7btlZbnMV+dcRAQQCk/lXIuJ6o05a6Tmtdb/RaByP41gDEACQJMmvRFG0WavVSErJQggIIZCmKZgZUppboaF5rDlGSZIs1uv1/w2AnpycfBUAzpw5I2dnZ+nxxx/PPtc/zp49y0888YQunDHRTi5s99g93vMH7d6C3WP3GAng9Oyzz0oAePTRR5Nref/GxsZH0zT9xU6nfarX61KaaorjmOr1BimlEff7YGXAEBZciQiaNdbW1jF3dQ5X5+awtbkFMGeIplSCdq+DJI6RJgmIDegJEJjMz5ArAlgX/8rGoxBBgKjeRC0K0Wo1IQD0ezFIEAABkoR9+/twm"
-        alt="National Interiors logo">
+        <img src="data:image/png;base64,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" alt="National Interiors logo">
         <span>National Interiors</span>
       </div>
       <div class="foot-links">
         <a href="#book">Book a Visit</a>
         <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
         <a href="#why">Why Us</a>
+        <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>&copy; <span id="year"></span> National Interiors &mdash; UPVC Doors, Windows and Modular Kitchen Works. All rights reserved.</span>
-      <span>Call <a href="tel:+917904645877">079046 45877</a></span>
+      <span>Call <a href="tel:+917904645877">079046 45877</a> / <a href="tel:+919788997701">97889 97701</a></span>
     </div>
   </div>
 </footer>
@@ -636,12 +780,22 @@
       links.style.left='0';
       links.style.right='0';
       links.style.flexDirection='column';
-      links.style.background='rgba(251,247,236,.97)';
+      links.style.background='rgba(12,12,12,.97)';
       links.style.padding='18px 28px';
       links.style.borderBottom='1px solid var(--line)';
       links.style.gap='16px';
     }
   });
+
+  // set minimum bookable date to today
+  const dateInput = document.getElementById('fdate');
+  if(dateInput){
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth()+1).padStart(2,'0');
+    const dd = String(today.getDate()).padStart(2,'0');
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+  }
 
   // booking form -> WhatsApp
   const form = document.getElementById('bookingForm');
@@ -652,6 +806,7 @@
     const phone = document.getElementById('fphone').value.trim();
     const service = document.getElementById('fservice').value;
     const address = document.getElementById('faddress').value.trim();
+    const date = document.getElementById('fdate').value;
     const msg = document.getElementById('fmsg').value.trim();
 
     if(!name || !phone || !service || !address){
@@ -663,6 +818,7 @@
     text += "Phone: " + encodeURIComponent(phone) + "%0A";
     text += "Service: " + encodeURIComponent(service) + "%0A";
     text += "Location: " + encodeURIComponent(address) + "%0A";
+    if(date){ text += "Preferred Date: " + encodeURIComponent(date) + "%0A"; }
     if(msg){ text += "Details: " + encodeURIComponent(msg) + "%0A"; }
 
     const waUrl = "https://wa.me/917904645877?text=" + text;
