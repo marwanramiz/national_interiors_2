@@ -79,17 +79,16 @@
   /* ---------- nav ---------- */
   header.site-header{
     position:sticky;top:0;z-index:60;
-    background:rgba(12,12,12,.88);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+    background:#ffffff;
+    border-bottom:1px solid rgba(201,162,74,0.4);
   }
   nav.wrap{
     display:flex;align-items:center;justify-content:space-between;
     padding-top:14px;padding-bottom:14px;
   }
   .brand{display:flex;align-items:center;gap:14px;}
-  .brand img{height:46px;width:auto;filter:drop-shadow(0 0 6px rgba(201,162,74,.25));}
-  .brand-name{font-family:var(--serif);font-size:1.28rem;color:var(--ivory);letter-spacing:.01em;line-height:1.1;}
+  .brand img{height:46px;width:auto;}
+  .brand-name{font-family:var(--serif);font-size:1.7rem;color:var(--ivory);letter-spacing:.01em;line-height:1.1;}
   .brand-name small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;color:var(--gold-light);margin-top:3px;}
   .nav-links{display:flex;gap:30px;align-items:center;}
   .nav-links a{font-size:.88rem;color:var(--grey);transition:color .2s ease;position:relative;}
@@ -106,17 +105,33 @@
   .nav-cta .phones a{color:var(--gold-light);}
   .menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.6rem;cursor:pointer;}
 
+  /* ---------- header: white background variant ---------- */
+  /* the header now has a white bar, so its own text/link colors are
+     overridden here to stay legible and on-palette (charcoal + gold) */
+  .site-header .brand-name{color:var(--charcoal);}
+  .site-header .brand-name small{color:var(--gold-dark);}
+  .site-header .nav-links a{color:#4a4030;}
+  .site-header .nav-links a:hover{color:var(--gold-dark);}
+  .site-header .nav-cta .phones{color:#4a4030;}
+  .site-header .nav-cta .phones a{color:var(--gold-dark);font-weight:600;}
+  .site-header .btn-outline{color:var(--gold-dark);border:1px solid var(--gold-dark);}
+  .site-header .btn-outline:hover{background:var(--gold-dark);color:#fff;}
+  .site-header .menu-toggle{color:var(--gold-dark);}
+
   @media (max-width:900px){
     .nav-links{display:none;}
     .menu-toggle{display:block;}
     .nav-cta .btn-outline{display:none;}
     .nav-cta .phones{display:none;}
   }
+  @media (max-width:480px){
+    .brand-name{font-size:1.3rem;}
+  }
 
   /* ---------- hero + booking ---------- */
   .hero{
     position:relative;
-    padding:64px 0 90px;
+    padding:64px 0 40px;
     background:
       radial-gradient(ellipse at 18% 0%, rgba(201,162,74,.14), transparent 55%),
       radial-gradient(ellipse at 90% 20%, rgba(201,162,74,.09), transparent 50%),
@@ -141,6 +156,7 @@
     font-size:clamp(2.2rem,4.4vw,3.4rem);
     line-height:1.14;
     margin:16px 0 20px;
+    color:var(--gold);
   }
   .hero p.lead{
     color:var(--grey);font-size:1.05rem;max-width:520px;margin-bottom:30px;
@@ -167,6 +183,7 @@
   .book-card .sub{color:var(--grey);font-size:.85rem;margin-bottom:22px;}
   .field{margin-bottom:16px;}
   .field label{display:block;font-size:.76rem;letter-spacing:.04em;color:var(--gold-light);margin-bottom:7px;}
+  .field label .hint{color:var(--grey);font-weight:400;letter-spacing:0;text-transform:none;}
   .field input,.field select,.field textarea{
     width:100%;
     background:rgba(0,0,0,.35);
@@ -190,9 +207,49 @@
   .form-note{font-size:.74rem;color:var(--grey);margin-top:12px;text-align:center;}
   .form-note a{color:var(--gold-light);}
 
+  /* ---------- multi-select service field ---------- */
+  .multiselect{position:relative;}
+  .ms-toggle{
+    width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:rgba(0,0,0,.35);
+    border:1px solid var(--line);
+    color:var(--ivory);
+    padding:12px 13px;
+    font-size:.92rem;
+    border-radius:2px;
+    font-family:var(--sans);
+    cursor:pointer;
+    text-align:left;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .ms-toggle span.count{color:var(--grey);}
+  .ms-toggle:after{content:"\25BE";color:var(--gold-light);flex:none;}
+  .ms-toggle.open{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.15);}
+  .ms-menu{
+    display:none;
+    position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;
+    background:var(--charcoal-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    max-height:250px;overflow-y:auto;
+    padding:8px;
+    box-shadow:0 22px 44px -14px rgba(0,0,0,.7);
+  }
+  .ms-menu.open{display:block;}
+  .ms-option{
+    display:flex;align-items:center;gap:10px;
+    padding:9px 8px;
+    font-size:.86rem;color:var(--cream);
+    border-radius:3px;cursor:pointer;
+  }
+  .ms-option:hover{background:rgba(201,162,74,.1);}
+  .ms-option input{accent-color:var(--gold);width:16px;height:16px;flex:none;cursor:pointer;}
+  .ms-error{display:none;color:#e28a83;font-size:.72rem;margin-top:7px;}
+  .ms-error.show{display:block;}
+
   /* ---------- section shell ---------- */
-  section{padding:96px 0;}
-  .section-head{max-width:640px;margin-bottom:56px;}
+  section{padding:56px 0;}
+  .section-head{max-width:640px;margin-bottom:36px;}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
   .section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);margin-top:12px;}
   .section-head p{color:var(--grey);margin-top:16px;font-size:1rem;}
@@ -365,7 +422,7 @@
 <section class="hero" id="book">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <h1>UPVC Doors & Windows | <span class="gold-text">Modular Interiors | Glass & SS Works.</span></h1>
+      <h1>UPVC Doors & Windows | Modular Interiors | Glass & SS Works.</h1>
       <p class="lead">Design • Manufacture • Install Complete Interior Solutions</p>
       <div class="hero-badges">
         <div><strong>5.0&#9733;</strong><span>Google Rated</span></div>
@@ -388,23 +445,31 @@
             <input type="tel" id="fphone" required placeholder="10-digit mobile number" pattern="[0-9+ ]{8,15}">
           </div>
         </div>
+
         <div class="field">
-          <label for="fservice">Service Required *</label>
-          <select id="fservice" required>
-            <option value="" disabled selected>Select a service</option>
-            <option>UPVC Doors and Windows</option>
-            <option>Toughened Glass &amp; Stainless Steel Handrails</option>
-            <option>Curved Toughened Glass Handrails</option>
-            <option>Toughened Glass Design Doors</option>
-            <option>Toughened Glass Canopies</option>
-            <option>Toughened Glass Roofing</option>
-            <option>Modular Kitchens</option>
-            <option>Modular Wardrobes</option>
-            <option>TV Units</option>
-            <option>Pooja Units</option>
-            <option>False Ceiling &amp; Wall Paneling</option>
-          </select>
+          <label for="msToggle">Service Required * <span class="hint">(choose one or more)</span></label>
+          <div class="multiselect" id="serviceMultiselect">
+            <button type="button" class="ms-toggle" id="msToggle">
+              <span class="label">Select service(s)</span>
+              <span class="count"></span>
+            </button>
+            <div class="ms-menu" id="msMenu">
+              <label class="ms-option"><input type="checkbox" value="UPVC Doors and Windows"> UPVC Doors and Windows</label>
+              <label class="ms-option"><input type="checkbox" value="Toughened Glass & Stainless Steel Handrails"> Toughened Glass &amp; Stainless Steel Handrails</label>
+              <label class="ms-option"><input type="checkbox" value="Curved Toughened Glass Handrails"> Curved Toughened Glass Handrails</label>
+              <label class="ms-option"><input type="checkbox" value="Toughened Glass Design Doors"> Toughened Glass Design Doors</label>
+              <label class="ms-option"><input type="checkbox" value="Toughened Glass Canopies"> Toughened Glass Canopies</label>
+              <label class="ms-option"><input type="checkbox" value="Toughened Glass Roofing"> Toughened Glass Roofing</label>
+              <label class="ms-option"><input type="checkbox" value="Modular Kitchens"> Modular Kitchens</label>
+              <label class="ms-option"><input type="checkbox" value="Modular Wardrobes"> Modular Wardrobes</label>
+              <label class="ms-option"><input type="checkbox" value="TV Units"> TV Units</label>
+              <label class="ms-option"><input type="checkbox" value="Pooja Units"> Pooja Units</label>
+              <label class="ms-option"><input type="checkbox" value="False Ceiling & Wall Paneling"> False Ceiling &amp; Wall Paneling</label>
+            </div>
+          </div>
+          <p class="ms-error" id="msError">Please select at least one service.</p>
         </div>
+
         <div class="row2">
           <div class="field">
             <label for="faddress">Location / Area *</label>
@@ -786,10 +851,11 @@
       links.style.left='0';
       links.style.right='0';
       links.style.flexDirection='column';
-      links.style.background='rgba(12,12,12,.97)';
+      links.style.background='#ffffff';
       links.style.padding='18px 28px';
-      links.style.borderBottom='1px solid var(--line)';
+      links.style.borderBottom='1px solid rgba(201,162,74,0.4)';
       links.style.gap='16px';
+      Array.from(links.querySelectorAll('a')).forEach(a=>{ a.style.color = '#4a4030'; });
     }
   });
 
@@ -803,6 +869,48 @@
     dateInput.min = `${yyyy}-${mm}-${dd}`;
   }
 
+  // ---------- multi-select "Service Required" field ----------
+  const msWrap = document.getElementById('serviceMultiselect');
+  const msToggle = document.getElementById('msToggle');
+  const msMenu = document.getElementById('msMenu');
+  const msError = document.getElementById('msError');
+  const msCheckboxes = Array.from(msMenu.querySelectorAll('input[type="checkbox"]'));
+
+  function getSelectedServices(){
+    return msCheckboxes.filter(c=>c.checked).map(c=>c.value);
+  }
+
+  function refreshMsLabel(){
+    const chosen = getSelectedServices();
+    const labelEl = msToggle.querySelector('.label');
+    const countEl = msToggle.querySelector('.count');
+    if(chosen.length === 0){
+      labelEl.textContent = 'Select service(s)';
+      countEl.textContent = '';
+    } else if(chosen.length <= 2){
+      labelEl.textContent = chosen.join(', ');
+      countEl.textContent = '';
+    } else {
+      labelEl.textContent = chosen[0] + ' + more';
+      countEl.textContent = chosen.length + ' selected';
+    }
+    if(chosen.length > 0){ msError.classList.remove('show'); }
+    return chosen;
+  }
+
+  msToggle.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const isOpen = msMenu.classList.toggle('open');
+    msToggle.classList.toggle('open', isOpen);
+  });
+  msCheckboxes.forEach(cb=>cb.addEventListener('change', refreshMsLabel));
+  document.addEventListener('click', (e)=>{
+    if(!msWrap.contains(e.target)){
+      msMenu.classList.remove('open');
+      msToggle.classList.remove('open');
+    }
+  });
+
   // booking form -> WhatsApp
   const form = document.getElementById('bookingForm');
   const toast = document.getElementById('toast');
@@ -810,19 +918,26 @@
     e.preventDefault();
     const name = document.getElementById('fname').value.trim();
     const phone = document.getElementById('fphone').value.trim();
-    const service = document.getElementById('fservice').value;
+    const services = getSelectedServices();
     const address = document.getElementById('faddress').value.trim();
     const date = document.getElementById('fdate').value;
     const msg = document.getElementById('fmsg').value.trim();
 
-    if(!name || !phone || !service || !address){
+    if(services.length === 0){
+      msError.classList.add('show');
+      msMenu.classList.add('open');
+      msToggle.classList.add('open');
+      msToggle.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+    if(!name || !phone || !address){
       return;
     }
 
     let text = "Hi National Interiors, I'd like to book a site visit.%0A%0A";
     text += "Name: " + encodeURIComponent(name) + "%0A";
     text += "Phone: " + encodeURIComponent(phone) + "%0A";
-    text += "Service: " + encodeURIComponent(service) + "%0A";
+    text += "Services: " + encodeURIComponent(services.join(', ')) + "%0A";
     text += "Location: " + encodeURIComponent(address) + "%0A";
     if(date){ text += "Preferred Date: " + encodeURIComponent(date) + "%0A"; }
     if(msg){ text += "Details: " + encodeURIComponent(msg) + "%0A"; }
