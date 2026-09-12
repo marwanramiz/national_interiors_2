@@ -106,8 +106,6 @@
   .menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.6rem;cursor:pointer;}
 
   /* ---------- header: white background variant ---------- */
-  /* the header now has a white bar, so its own text/link colors are
-     overridden here to stay legible and on-palette (charcoal + gold) */
   .site-header .brand-name{color:var(--charcoal);}
   .site-header .brand-name small{color:var(--gold-dark);}
   .site-header .nav-links a{color:#4a4030;}
@@ -271,13 +269,29 @@
     flex-direction:column;
   }
   .svc-card:hover{background:var(--charcoal-2);}
+
+  /* FIX: replaced aspect-ratio (unreliable on some mobile browsers, causes
+     the media box to collapse to 0 height so the image never appears)
+     with the universally-supported padding-top percentage technique,
+     and the image is absolutely positioned to fill that box. This
+     renders identically on desktop and mobile. */
   .svc-media{
     position:relative;
-    aspect-ratio:4/3;
+    width:100%;
+    padding-top:75%; /* 4:3 ratio, matches previous aspect-ratio:4/3 */
     background:var(--charcoal-2);
     overflow:hidden;
   }
-  .svc-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
+  .svc-media img{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    transition:transform .6s ease;
+  }
   .svc-card:hover .svc-media img{transform:scale(1.05);}
   .svc-media .ph{
     position:absolute;inset:10px;
@@ -354,17 +368,24 @@
   }
   .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(.35) invert(.92) contrast(.9);}
 
-  /* ---------- footer ---------- */
-  footer{background:var(--charcoal);border-top:1px solid var(--line);padding:44px 0 26px;}
-  .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;padding-bottom:26px;border-bottom:1px solid var(--line);}
+  /* ---------- footer (white background, matching header) ---------- */
+  footer{
+    background:#ffffff;
+    border-top:1px solid rgba(201,162,74,0.4);
+    padding:44px 0 26px;
+  }
+  .foot-grid{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
+    padding-bottom:26px;border-bottom:1px solid rgba(201,162,74,0.4);
+  }
   .foot-brand{display:flex;align-items:center;gap:12px;}
   .foot-brand img{height:34px;}
-  .foot-brand span{font-family:var(--serif);color:var(--ivory);font-size:1.05rem;}
+  .foot-brand span{font-family:var(--serif);color:var(--charcoal);font-size:1.05rem;}
   .foot-links{display:flex;gap:26px;flex-wrap:wrap;}
-  .foot-links a{font-size:.85rem;color:var(--grey);}
-  .foot-links a:hover{color:var(--gold-light);}
-  .foot-bottom{display:flex;justify-content:space-between;padding-top:22px;flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--grey);}
-  .foot-bottom a{color:var(--gold-light);}
+  .foot-links a{font-size:.85rem;color:#4a4030;}
+  .foot-links a:hover{color:var(--gold-dark);}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:22px;flex-wrap:wrap;gap:10px;font-size:.78rem;color:#4a4030;}
+  .foot-bottom a{color:var(--gold-dark);}
 
   /* whatsapp float */
   .wa-float{
@@ -505,8 +526,7 @@
       <!-- 1. UPVC Doors & Windows -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/upvc-doors-windows.jpeg" alt="Premium UPVC Doors & Windows">
-          
+          <img src="images/upvc-doors-windows.jpeg" alt="Premium UPVC Doors & Windows" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">01</span>
@@ -518,8 +538,7 @@
       <!-- 2. Toughened Glass & Stainless Steel Handrail -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/toughouned-handrail.jpeg" alt="Toughened Handrail">
-         
+          <img src="images/toughouned-handrail.jpeg" alt="Toughened Handrail" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">02</span>
@@ -531,8 +550,7 @@
       <!-- 3. Curved Toughened Glass Handrail -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/curved-glass-rails.jpeg" alt="Curved Glass Rails">
-         
+          <img src="images/curved-glass-rails.jpeg" alt="Curved Glass Rails" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">03</span>
@@ -544,8 +562,7 @@
       <!-- 4. Toughened Glass Design Door -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/toughouned-glass-door.jpeg" alt="Toughened Glass Door">
-          
+          <img src="images/toughouned-glass-door.jpeg" alt="Toughened Glass Door" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">04</span>
@@ -557,8 +574,7 @@
       <!-- 5. Toughened Glass Canopy -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/toughouned-canopy.jpeg" alt="Toughened Canopy">
-          
+          <img src="images/toughouned-canopy.jpeg" alt="Toughened Canopy" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">05</span>
@@ -570,8 +586,7 @@
       <!-- 6. Toughened Glass Roof -->
       <div class="svc-card">
         <div class="svc-media">
-         <img src="images/toughouned-glass-roof.jpeg" alt="Toughened Glass Roof">
-          
+         <img src="images/toughouned-glass-roof.jpeg" alt="Toughened Glass Roof" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">06</span>
@@ -583,8 +598,7 @@
       <!-- 7. Modular Kitchen -->
       <div class="svc-card">
         <div class="svc-media">
-         <img src="images/modular-kitchen.jpeg" alt="Modular Kitchen">
-          
+         <img src="images/modular-kitchen.jpeg" alt="Modular Kitchen" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">07</span>
@@ -596,8 +610,7 @@
       <!-- 8. Modular Wardrobe -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/modular-wardrobe.jpeg" alt="Modular Wardrobe">
-         
+          <img src="images/modular-wardrobe.jpeg" alt="Modular Wardrobe" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">08</span>
@@ -609,8 +622,7 @@
       <!-- 9. TV Unit -->
       <div class="svc-card">
         <div class="svc-media">
-         <img src="images/modern-tv-unit.jpeg" alt="Modern TV Unit">
-         
+         <img src="images/modern-tv-unit.jpeg" alt="Modern TV Unit" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">09</span>
@@ -622,8 +634,7 @@
       <!-- 10. Pooja Unit -->
       <div class="svc-card">
         <div class="svc-media">
-          <img src="images/pooja-unit.jpeg" alt="Pooja Unit">
-         
+          <img src="images/pooja-unit.jpeg" alt="Pooja Unit" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">10</span>
@@ -635,8 +646,7 @@
       <!-- 11. False Ceiling & Wall Paneling -->
       <div class="svc-card">
         <div class="svc-media">
-         <img src="images/wall-paneling.jpeg" alt="Wall Paneling">
-          
+         <img src="images/wall-paneling.jpeg" alt="Wall Paneling" loading="lazy">
         </div>
         <div class="svc-body">
           <span class="num">11</span>
