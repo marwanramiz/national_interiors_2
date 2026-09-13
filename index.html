@@ -70,7 +70,15 @@
   }
   .btn-outline:hover{background:var(--gold);color:var(--black);}
   /* ---------- reveal on scroll ---------- */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);}
+  /* FIX: content is visible by default now. Previously .reveal started at
+     opacity:0 and only became visible once JavaScript detected the element
+     had scrolled into view and added the "in" class. On some mobile
+     browsers that trigger was not firing reliably, which left entire
+     sections (including all service photos) permanently invisible. The
+     fade-in is now a pure enhancement: elements are visible from the
+     start, and the "in" class (added by the same scroll-watching script)
+     only adds a subtle finishing touch instead of controlling visibility. */
+  .reveal{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);}
   .reveal.in{opacity:1;transform:translateY(0);}
   .reveal-delay-1.in{transition-delay:.12s;}
   .reveal-delay-2.in{transition-delay:.24s;}
